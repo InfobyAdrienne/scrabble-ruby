@@ -25,4 +25,14 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('street')
     expect(scrabble.score).to eq 6
   end
+
+  it 'should have a score of 22 for the word quirky' do 
+    scrabble = Scrabble.new('quirky')
+    expect(scrabble.score).to eq 22
+  end
+
+  it 'should have a score of 22 for the word quirky' do 
+    scrabble = Scrabble.new('OXYPHENBUTAZONE')
+    expect(scrabble.score).to eq 41
+  end
 end 

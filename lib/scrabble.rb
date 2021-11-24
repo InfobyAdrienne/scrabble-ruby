@@ -6,7 +6,7 @@ class Scrabble
   end
 
   def score
-    split_up_letters = @word.chars
+    split_up_letters = @word.downcase.chars
 
     replacements = {
           "a" => 1,
@@ -25,9 +25,16 @@ class Scrabble
           "c" => 3,
           "m" => 3,
           "p" => 3,
-
-
           "f" => 4,
+          "h" => 4,
+          "v" => 4,
+          "w" => 4,
+          "y" => 4,
+          "k" => 5,
+          "j" => 8,
+          "x" => 8,
+          "q" => 10,
+          "z" => 10,
         }
 
     each_letter_score = split_up_letters.map { |e|
@@ -36,30 +43,5 @@ class Scrabble
 
     return each_letter_score.sum
 
-
-    # each_letter_score = split_up_letters.map { |x|
-    #   if x == "a"
-    #     1
-    #   elsif x == "f"
-    #     4
-    #   else
-    #     0 
-    #   end
-    # }
-    #  return each_letter_score.sum
-
-    # if @word.strip.empty?
-    #   return 0
-    # else 
-    #   split_up_letters.map { |x| 
-    #       if @word.include? "a"
-    #         return 1 
-    #       elsif x == "f"
-    #         return 4
-    #       else 
-    #         return 0
-    #       end
-    #     }
-    # end 
   end 
 end 
