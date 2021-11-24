@@ -1,12 +1,13 @@
 class Scrabble
   
+  attr_reader :word
 
   def initialize(word)
     @word = word 
   end
 
   def score
-    split_up_letters = @word.downcase.chars
+    split_up_letters = word.downcase.chars
 
     replacements = {
           "a" => 1,
