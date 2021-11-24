@@ -15,4 +15,14 @@ describe 'scrabble score' do
     scrabble = Scrabble.new('f')
     expect(scrabble.score).to eq 4
   end
+
+  it 'should have a score of 5 for the word af' do 
+    scrabble = Scrabble.new('af')
+    expect(scrabble.score).to eq 5
+  end
+
+  it 'should have a score of 6 for the word street' do 
+    scrabble = Scrabble.new('street')
+    expect(scrabble.score).to eq 6
+  end
 end 
