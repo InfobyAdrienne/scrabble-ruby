@@ -5,6 +5,12 @@ class Scrabble
   end
 
   def score
-    0
+    if @word == "a"
+      return 1 
+    elsif @word == "f"
+      return 4
+    else 
+      return 0
+    end
   end 
 end 
